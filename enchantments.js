@@ -53,7 +53,11 @@ export function middleTwo(deck) {
  */
 
 export function sandwichTrick(deck) {
-  throw new Error('Implement the sandwichTrick function');
+  let firstCard = deck.shift();
+  let lastCard = deck.pop();
+  let halfOfTheArray = deck.length / 2;
+  deck.splice(halfOfTheArray, 0, lastCard, firstCard);
+  return deck;
 }
 
 /**
