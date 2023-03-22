@@ -79,7 +79,16 @@ export function twoIsSpecial(deck) {
  * @returns {number[]} ordered deck
  */
 export function perfectlyOrdered(deck) {
-  throw new Error('Implement the perfectlyOrdered function');
+  deck.sort((item1, item2) => {
+      if (item1 < item2) {
+          return -1;
+      } else if (item1 > item2) {
+          return 1;
+      } else {
+          return 0;
+      }
+  })
+  return deck;
 }
 
 /**
